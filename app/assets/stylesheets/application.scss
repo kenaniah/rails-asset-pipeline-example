@@ -10,10 +10,15 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootstrap
  *= require_self
  *= require_tree .
  */
+$body_margin: 0 30px;
+
+/* Import CSS files */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 BODY {
-    margin: 0 20px;
+    margin: $body_margin;
 }
