@@ -9,7 +9,18 @@
 </head>
 <body>
 
-<%= yield %>
+<header>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <ul class="nav navbar-nav">
+            <li><%= link_to "Home", root_path, class: 'navbar-brand' %></li>
+            <li><%= link_to "New Item", new_item_path %></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <%= yield %>
+</main>
 
 </body>
 </html>

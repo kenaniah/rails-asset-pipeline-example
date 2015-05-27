@@ -19,6 +19,9 @@ $body_margin: 0 30px;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-BODY {
+MAIN {
+    margin: $body_margin;
+}
+UL.navbar-nav {
     margin: $body_margin;
 }
