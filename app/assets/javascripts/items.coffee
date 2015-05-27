@@ -4,8 +4,24 @@
 
 ready = ->
 
-	# Sort the table
-	$(".sorting-table").stupidtable();
+	# Make the table sortable
+	table = $(".sorting-table").stupidtable();
+
+	# Listen for an event after the table is sorted
+	table.bind 'aftertablesort', (event, data) ->
+
+		# data.column - the index of the column sorted after a click
+	    # data.direction - the sorting direction (either asc or desc)
+	    # $(this) - this table object
+
+		# Get all table columns
+		cols = $(this).find("THEAD [data-sort]")
+
+		# Remove the sorting classes
+		cols.find("SPAN").removeClass()
+
+		dir = if data.direction == "asc" then "up" else "down"
+		cols.eq(data.column).find("SPAN").addClass("glyphicon glyphicon-arrow-" + dir)
 
 
 # Run the ready function on the ready events

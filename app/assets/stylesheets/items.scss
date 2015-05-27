@@ -3,4 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .sorting-table [data-sort] {
 	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.sorting-table [data-sort] SPAN {
+	float: right;
+	min-width: 1em;
 }
